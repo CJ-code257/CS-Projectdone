@@ -1,0 +1,360 @@
+        /* ===== GLOBAL STYLES ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #2c5aa0;       /* Primary color (60%) - Blue */
+            --secondary: #1e4080;     /* Secondary color (30%) - Darker blue */
+            --accent: #ffd700;        /* Accent color (10%) - Gold */
+            --light: #f9f9f9;
+            --dark: #333;
+            --text: #333;
+            --text-light: #fff;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--light);
+        }
+
+        /* ===== HEADER STYLES ===== */
+        header {
+            background-color: var(--primary);
+            color: var(--text-light);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        /* Search bar styling */
+        .search-bar {
+            display: flex;
+            align-items: center;
+        }
+
+        .search-bar input {
+            padding: 0.5rem;
+            border: none;
+            border-radius: 4px 0 0 4px;
+            outline: none;
+        }
+
+        .search-bar button {
+            padding: 0.5rem;
+            background-color: var(--secondary);
+            color: white;
+            border: none;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+
+        /* ===== NAVIGATION STYLES ===== */
+        nav {
+            background-color: var(--secondary);
+            padding: 0.5rem 0;
+        }
+
+        nav ul {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            list-style: none;
+            padding: 0 2rem;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: var(--text-light);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: var(--primary);
+        }
+
+        /* Current page indicator */
+        nav a[href="about.html"] {
+            background-color: var(--primary);
+            font-weight: bold;
+        }
+
+        /* ===== MAIN CONTENT ===== */
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        section {
+            background: white;
+            margin-bottom: 2rem;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 0.5rem;
+        }
+
+        h3 {
+            color: var(--secondary);
+            margin: 1.5rem 0 1rem 0;
+            font-size: 1.3rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        img {
+            display: block;
+            margin: 1rem auto;
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        /* ===== ABOUT OUR ORGANIZATION ===== */
+        .about-org {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .about-org img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* ===== TEAM MEMBER PROFILE ===== */
+        .team-profile {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            border-left: 4px solid var(--primary);
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 2rem;
+            align-items: start;
+        }
+
+        .team-profile img {
+            width: 250px;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .team-info h3 {
+            color: var(--primary);
+            font-size: 1.5rem;
+            margin-top: 0;
+        }
+
+        .team-info p:first-of-type {
+            font-weight: bold;
+            color: var(--secondary);
+        }
+
+        /* ===== RELATED ORGANIZATIONS ===== */
+        .orgs-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .orgs-list li {
+            background: #f8f9fa;
+            margin-bottom: 0.5rem;
+            padding: 1rem;
+            border-left: 4px solid var(--primary);
+            border-radius: 0 4px 4px 0;
+            transition: background-color 0.3s;
+        }
+
+        .orgs-list li:hover {
+            background-color: #e9ecef;
+        }
+
+        .orgs-list a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .orgs-list a:hover {
+            text-decoration: underline;
+        }
+
+        /* ===== CONTACT INFORMATION ===== */
+        .contact-section {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: var(--text-light);
+        }
+
+        .contact-section h2,
+        .contact-section h3 {
+            color: var(--text-light);
+        }
+
+        .contact-section h2 {
+            border-bottom-color: rgba(255,255,255,0.3);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+
+        .contact-section a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .contact-section a:hover {
+            text-decoration: underline;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 0.5rem;
+        }
+
+        .social-links a {
+            padding: 0.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .social-links a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        /* ===== FOOTER STYLES ===== */
+        footer {
+            background-color: var(--dark);
+            color: var(--text-light);
+            padding: 2rem;
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        footer p {
+            margin-bottom: 1rem;
+        }
+
+        footer a {
+            color: #87ceeb;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+        
+        /* ===== SOURCES LIST STYLING ===== */
+        .sources-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            text-align:left
+        }
+
+        .sources-list li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.2rem;
+            text-indent: -1.2rem;
+        }
+
+        .sources-list a {
+            color: #87ceeb;
+            word-break: break-all;
+        }
+
+        .sources-list a:hover {
+            text-decoration: underline;
+        }
+
+        #source{
+            color:#ffd700;
+            text-align:left
+
+        }
+
+        /* ===== RESPONSIVE DESIGN ===== */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            main {
+                padding: 1rem;
+            }
+
+            section {
+                padding: 1.5rem;
+            }
+
+            .about-org {
+                grid-template-columns: 1fr;
+            }
+
+            .team-profile {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .team-profile img {
+                margin: 0 auto;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }

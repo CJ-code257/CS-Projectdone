@@ -1,0 +1,264 @@
+        /* ===== GLOBAL STYLES ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #2c5aa0;       /* Primary color (60%) - Blue */
+            --secondary: #1e4080;     /* Secondary color (30%) - Darker blue */
+            --accent: #ffd700;        /* Accent color (10%) - Gold */
+            --light: #f9f9f9;
+            --dark: #333;
+            --text: #333;
+            --text-light: #fff;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--light);
+        }
+
+        /* ===== HEADER STYLES ===== */
+        header {
+            background-color: var(--primary);
+            color: var(--text-light);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        /* Search bar styling */
+        .search-bar {
+            display: flex;
+            align-items: center;
+        }
+
+        .search-bar input {
+            padding: 0.5rem;
+            border: none;
+            border-radius: 4px 0 0 4px;
+            outline: none;
+        }
+
+        .search-bar button {
+            padding: 0.5rem;
+            background-color: var(--secondary);
+            color: white;
+            border: none;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+
+        /* ===== NAVIGATION STYLES ===== */
+        nav {
+            background-color: var(--secondary);
+            padding: 0.5rem 0;
+        }
+
+        nav ul {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            list-style: none;
+            padding: 0 2rem;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: var(--text-light);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+            transform: scaleY(1.5);
+        }
+
+        nav a:hover {
+            background-color: var(--primary);
+            transform: scaleY(1.5);
+        }
+
+        /* ===== MAIN CONTENT ===== */
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        section {
+            background: white;
+            margin-bottom: 2rem;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 0.5rem;
+        }
+
+        h3 {
+            color: var(--secondary);
+            margin: 1.5rem 0 1rem 0;
+            font-size: 1.3rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        img {
+            display: block;
+            margin: 1rem auto;
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        /* ===== TABLE STYLES ===== */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            background: white;
+        }
+
+        th, td {
+            padding: 0.8rem;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: var(--primary);
+            color: var(--text-light);
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+
+        tr:hover {
+            background-color: #e8f4f8;
+        }
+
+        /* ===== CALL TO ACTION STYLING ===== */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: var(--text-light);
+        }
+
+        .cta-section h2 {
+            color: var(--text-light);
+            border-bottom-color: rgba(255,255,255,0.3);
+        }
+
+        .cta-section a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .cta-section a:hover {
+            text-decoration: underline;
+        }
+
+        /* ===== FOOTER STYLES ===== */
+        footer {
+            background-color: var(--dark);
+            color: var(--text-light);
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        footer p {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        footer h3 {
+            color: var(--accent);
+            margin-top: 1.5rem;
+        }
+
+        footer ul {
+            list-style: none;
+            padding-left: 1rem;
+        }
+
+        footer li {
+            margin-bottom: 0.5rem;
+        }
+
+        footer a {
+            color: #87ceeb;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* ===== RESPONSIVE DESIGN ===== */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            main {
+                padding: 1rem;
+            }
+
+            section {
+                padding: 1.5rem;
+            }
+
+            table {
+                font-size: 0.9rem;
+            }
+
+            th, td {
+                padding: 0.5rem;
+            }
+        }
